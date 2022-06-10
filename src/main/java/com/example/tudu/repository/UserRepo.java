@@ -1,0 +1,8 @@
+package com.example.tudu.repository;
+
+import com.example.tudu.entity.UserEntity;
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserRepo extends CrudRepository<UserEntity, Long> {
+    UserEntity findByUsername(String username);
+}
